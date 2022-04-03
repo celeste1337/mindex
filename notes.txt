@@ -1,0 +1,32 @@
+to do:
+[x] add new compensation property of type number to employee type
+[x] add type to employee component
+[x] employee type may have property directReports = [employeeid, ..] (employees who report to this employee)
+[x] employee component: add new field that collects all emplyees who report to this person (direct AND indirect), display total number of reporting employees in header of card (how many people each person manages)
+[x] employee view template (.html): add functionality to list direct reports if any, style rows
+    [x] on each row, two buttons: edit, delete
+    [x] eventemitter on employee component that will emit event to parent (employee list component)
+    [x] employee list component handles initiating and observing request
+[x] create and register a new app-level component that shows a dialog -> confirmation of delete, or form to edit
+[x] employee list component: implement handler to initiate/observe service calls to del/update direct reports
+[x] styling!
+
+notes:
+started around 5pm on 3/26/22
+sorry i got busy with schoolwork and am actually starting work on 3/30/22 around 6pm
+
+i took out the <dt>,<dl> etc tags in employee.component.html in favor of more common elements for a little more readability, hope thats cool
+
+saturday: i'm so sorry i have to put this away for a bit to attend a birthday party -> things done today: dialog page open/close, service calls, eventemitter, dialog page does two types of forms and opens on top correctly
+
+sunday: all done (around 7pm)
+
+what went well:
+* styling was fun! this was a fun challenge
+* i haven't touched angular in a while, this was a fun refresh
+
+what didn't:
+* i haven't done angular in a while and am a little too used to react, things took me much longer to accomplish and i spent a lot of time reading and trying to refresh my memory
+* the dialog open/close toggle logic is weirdly written but i don't know a better way to do it quickly with angular
+* the "build the update employee to send to the service" logic is really bad code and i don't enjoy how hacky it is but it does work
+* tests: if i had a lot more time i think i could write tests, but honestly it is not my strongest suit. i have a lot of trouble writing effective tests and not just tests for the sake of having tests

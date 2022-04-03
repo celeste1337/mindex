@@ -1,0 +1,13 @@
+.employee-list {
+    display: flex;
+}
+
+.mat-grid-tile {
+    overflow-y: auto;
+    margin: 1vw;
+}
+
+app-employee {
+    width: 100%;
+    height: 100%;
+}

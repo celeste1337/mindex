@@ -1,5 +1,10 @@
-<mat-grid-list class="employee-list" cols="4">
+<div class="dialog-page" *ngIf="showDialog">
+  <app-dialog-page [showDialog]="showDialog" [dialogType]="dialogType" [employeeDialog]="employeeDialog" (submitUpdate)="receiveUpdate($event)" (submitRemove)="receiveRemove($event)" (close)="closeDialog()"></app-dialog-page>
+</div>
+
+
+<mat-grid-list class="employee-list" cols="2">
   <mat-grid-tile *ngFor="let emp of employees">
-    <app-employee [employee]="emp"></app-employee>
+    <app-employee (editEvent)="editCompensation($event)" (removeEvent)="removeReporter($event)" [employee]="emp"></app-employee>
   </mat-grid-tile>
 </mat-grid-list>

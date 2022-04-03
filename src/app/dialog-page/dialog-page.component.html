@@ -1,0 +1,26 @@
+<div class="dialog" *ngIf="showCompensation" id="updateCompensationForm">
+    <h3>Update Compensation</h3>
+    <form (submit)="submitForm($event)">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" value="{{this.employeeDialog.firstName}}">
+
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" value="{{this.employeeDialog.lastName}}">
+
+        <label for="title">Title</label>
+        <input type="text" name="title" value="{{this.employeeDialog.position}}">
+
+        <label for="compensation">Compensation</label>
+        <input type="text" name="compensation" value="{{this.employeeDialog.compensation}}">
+
+        <button type="submit" class="success" >Update</button>
+        <button type="button" class="danger" (click)="toggleCompensation()">Cancel</button>
+    </form>
+</div>
+
+<div class="dialog" *ngIf="showRemove" id="removeReporterConfirmation">
+    <h3>Remove Reporter</h3>
+    <p>Permanently delete {{this.employeeDialog.firstName}} {{this.employeeDialog.lastName}}? This action cannot be undone.</p>
+    <button type="submit" class="success" (click)="submitForm($event)">Yes</button>
+    <button type="button" class="danger" (click)="toggleRemove()">Cancel</button>
+</div>

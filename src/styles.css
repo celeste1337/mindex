@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: rgb(237, 237, 237);
+    font-family: sans-serif;
+}
+
+button, input[type=button] {
+    background-color: white;
+    color: white;
+    border-radius: 3px;
+    border:2px solid black;
+    margin: 1px;
+}
+
+.success {
+    border-color: green;
+    background-color: green;
+}
+
+.danger {
+    border-color: red;
+    background-color: red;
+}
+
+.info {
+    border-color: steelblue;
+    background-color: steelblue;
+}

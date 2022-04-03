@@ -1,0 +1,9 @@
+.directReportsRow {
+    border: 1px solid darkgrey;
+    border-radius: 3px;
+    padding: 1vh 2vw;
+}
+
+mat-card {
+    margin: 1vw;
+}
